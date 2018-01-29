@@ -23,9 +23,10 @@ public class Exceptions {
 	    error();
 	    
 	    // unreachable code 
-	    System.out.println("something"); 
+	    int a = 40 / 0;
+	    System.out.println(a); 
 	    runtime();
-	    except();	    
+	    except();  
 	    
 	    
 	}
@@ -35,10 +36,13 @@ public class Exceptions {
 	catch (Exception e) {
 	    System.out.println("catched Exception");
 	}
+	// If error() is thrown and not catched, output will be "Done" and error exception message
 	catch (Error er) {
 	    System.out.println("catched error");
+	}
+	finally {	    
+	    System.out.println("Done"); 	    
 	}	
-	
 	
 	System.out.println("on the end");
     }
